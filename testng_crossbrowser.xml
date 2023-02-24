@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="tests" thread-count="2"><!--  parallel="tests" thread-count="2"  thread-count changes with number of tests -->
+  <test thread-count="5" name="Test_AddRemoveItem">
+  <parameter name="browser" value="Firefox" />
+  
+    <classes>
+      <class name="uk.co.testing.AddRemoveItemBasketTest"/>
+    </classes>
+  </test> <!-- Test -->
+  <test thread-count="5" name="Test2_CompleteOrder">
+   <parameter name="browser" value="Firefox" />
+    <classes>
+      <class name="uk.co.testing.OrderCompleteTest"/>
+    </classes>
+  </test> <!-- Test -->
+  
+  <test thread-count="5" name="Test_AddRemoveItem">
+<parameter name="browser" value="Chrome" />
+ 
+    <classes>
+      <class name="uk.co.testing.AddRemoveItemBasketTest"/>
+    </classes>
+  </test> <!-- Test -->
+  <test thread-count="5" name="Test2_CompleteOrder">
+  <parameter name="browser" value="Chrome" />
+
+    <classes>
+      <class name="uk.co.testing.OrderCompleteTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
+
